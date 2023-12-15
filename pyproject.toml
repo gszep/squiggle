@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "squiggle"
+version = "0.1.0"
+description = ""
+authors = ["Grisha Szep <gregory.szep@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jax = {extras = ["cuda12-pip"], version = "^0.4.23"}
+
+
+[[tool.poetry.source]]
+name = "jax[cuda12_pip]"
+url = "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
+priority = "primary"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
