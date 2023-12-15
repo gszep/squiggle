@@ -2,12 +2,12 @@
 name = "squiggle"
 version = "0.1.0"
 description = ""
-authors = ["Grisha Szep <gregory.szep@gmail.com>"]
+authors = ["Grisha Szep <grisha.szep@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-jax = {extras = ["cuda12-pip"], version = "^0.4.23"}
+jax = { extras = ["cuda12-pip"], version = "^0.4.23" }
 
 
 [[tool.poetry.source]]
