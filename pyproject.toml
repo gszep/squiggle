@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.10"
 jax = { extras = ["cuda12-pip"], version = "^0.4.23" }
 pytest = "^7.4.3"
+pytest-cov = "^4.1.0"
 
 
 [[tool.poetry.source]]
