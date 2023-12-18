@@ -34,5 +34,5 @@ repos:
   rev: 'v1.7.1'
   hooks:
   - id: mypy
-    additional_dependencies: [types-requests==2.31.0, jax==0.4.23, jaxlib==0.4.19, ml_dtypes==0.2.0, numpy==1.26.0, scipy==1.11.2]
+    additional_dependencies: [types-requests==2.31.0, jax==0.4.23, jaxlib==0.4.19, ml_dtypes==0.2.0, numpy==1.26.0, scipy==1.11.2, torch==2.1.0, torchvision==0.16.0, absl-py==2.0.0]
     args: [--config=pyproject.toml]
