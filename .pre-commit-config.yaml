@@ -8,27 +8,22 @@
 # 'pre-commit run --all'
 
 repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.5.0
+- repo: https://github.com/psf/black
+  rev: 23.12.0
   hooks:
-  - id: check-ast
-  - id: check-merge-conflict
-  - id: check-toml
-  - id: check-yaml
-  - id: end-of-file-fixer
-    # only include python files
-    files: \.py$
-  - id: debug-statements
-    # only include python files
-    files: \.py$
-  - id: trailing-whitespace
-    # only include python files
-    files: \.py$
+  - id: black
+    language_version: python3.10
 
-- repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.1.8
+- repo: https://github.com/pycqa/flake8
+  rev: 6.1.0
   hooks:
-  - id: ruff
+  - id: flake8
+
+- repo: https://github.com/pycqa/isort
+  rev: 5.13.2
+  hooks:
+    - id: isort
+      name: isort (python)
 
 - repo: https://github.com/pre-commit/mirrors-mypy
   rev: 'v1.7.1'

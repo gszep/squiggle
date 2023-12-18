@@ -12,13 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from squiggle.polynomials.polyutils import (
-    as_series as as_series,
-    trimseq as trimseq,
-    trimcoef as trimcoef,
-    getdomain as getdomain,
-    mapdomain as mapdomain,
-    mapparms as mapparms,
-)
-
 from squiggle.polynomials import chebyshev as chebyshev
+from squiggle.polynomials.polyutils import as_series as as_series
+from squiggle.polynomials.polyutils import getdomain as getdomain
+from squiggle.polynomials.polyutils import mapdomain as mapdomain
+from squiggle.polynomials.polyutils import mapparms as mapparms
+from squiggle.polynomials.polyutils import trimcoef as trimcoef
+from squiggle.polynomials.polyutils import trimseq as trimseq
