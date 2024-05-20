@@ -1,40 +1,32 @@
 [tool.poetry]
-name = "squiggle"
-version = "0.1.0"
-description = ""
 authors = ["Grisha Szep <grisha.szep@gmail.com>"]
+description = ""
+name = "squiggle"
 readme = "README.md"
+version = "0.1.0"
 
 [tool.poetry.dependencies]
-python = "^3.10"
-jax = { extras = ["cuda12-pip"], version = "^0.4.23" }
+absl-py = "^2.0.0"
+isort = "^5.13.2"
+jax = {extras = ["cuda12"], version = "^0.4.28"}
+matplotlib = "^3.8.2"
+mypy = "^1.7.1"
+pre-commit = "^3.6.0"
 pytest = "^7.4.3"
 pytest-cov = "^4.1.0"
-pre-commit = "^3.6.0"
-mypy = "^1.7.1"
-absl-py = "^2.0.0"
-matplotlib = "^3.8.2"
+python = "^3.10"
 torch = "2.1.0"
-torchvision = "0.16.0"
 torchaudio = "2.1.0"
-isort = "^5.13.2"
-
-[[tool.poetry.source]]
-name = "jax[cuda12_pip]"
-url = "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
-priority = "primary"
-
+torchvision = "0.16.0"
 
 [[tool.poetry.source]]
 name = "PyPI"
 priority = "primary"
 
-
 [[tool.mypy.overrides]]
-module = ["torchvision.*",  "absl.*"]
 ignore_missing_imports = true
-
+module = ["torchvision.*", "absl.*"]
 
 [build-system]
-requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
